@@ -125,7 +125,7 @@ resource "aws_lambda_function" "spoke" {
 
   vpc_config {
     subnet_ids         = var.subnet_ids
-    security_group_ids = ["aws_security_group.lambda.id"]
+    security_group_ids = [aws_security_group.lambda.id]
   }
 
   environment {
