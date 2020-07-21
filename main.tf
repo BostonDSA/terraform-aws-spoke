@@ -1,10 +1,10 @@
 # Spoke on AWS
-# 
+#
 # This will automate creation of resources for running Spoke on AWS. This only
 # takes care of the resource creation listed in the first section of the AWS
 # Deploy guide (docs/DEPLOYING_AWS_LAMBDA.md). It will _not_ actually deploy
 # the code.
-# 
+#
 # Author: @bchrobot <benjamin.blair.chrobot@gmail.com>
 # Version 0.1.0
 
@@ -45,7 +45,7 @@ resource "aws_s3_bucket" "spoke_bucket" {
   bucket = "${var.s3_bucket_name}"
   acl    = "private"
 
-  tags {
+  tags   = {
     Name = "Spoke Bucket"
   }
 }
