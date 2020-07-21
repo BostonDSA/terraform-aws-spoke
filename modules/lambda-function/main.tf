@@ -117,7 +117,7 @@ resource "aws_lambda_function" "spoke" {
   source_code_hash = var.source_code_hash
 
   handler     = "lambda.handler"
-  runtime     = "nodejs6.10"
+  runtime     = "nodejs12.x"
   memory_size = "512"
   timeout     = "300"
 
